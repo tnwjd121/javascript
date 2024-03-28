@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1. boolInput()
+    //2-1. String()
+    //2-2. boolean()
+    //3.
+    const pCm = prompt("cm 단위의 숫자를 입력해주세요.")
+    const cm = Number(pCm)
+    const inch = cm*0.393701
+    console.log(`${cm}cm는 ${inch}inch 입니다.`)
+
+    //4.
+    const pR = prompt("원의 반지름을 입력해주세요")
+    const r = Number(pR)
+    const area = r*r*3.14
+    const round = 2*3.14*r
+    console.log(`원의 반지름: ${r}`)
+    console.log(`원의 넓이: ${area}`)
+    console.log(`원의 반지름: ${round}`)
+
+    //5.
+    const pMoney = prompt("달러 단위의 금액을 입력해주세요")
+    const money = Number(pMoney)
+    const resultMoney = money*1207
+    console.log(`달러: ${money}`)
+    console.log(`-> 원화: ${resultMoney}`)
+
+    //6-1.
+    // 무게 구하는 공식 1000g -> 1kg
+    const pG = prompt("g을 입력해주세요")
+    const g = Number(pG)
+    const kg = g/1000
+    console.log(`${g}g이면 ${kg}kg입니다`)
+
+    //6-2.
+    //예상키 계산법
+    // 남자아이 예상키 계산법 : (아버지의 키 + 어머니의 키+13) / 2
+    // 여자아이 예상키 계산법 : (아버지의 키 + 어머니의 키-13) / 2
+    const pFather = prompt("아버지의 키를 입력해주세요")
+    const father = Number(pFather)
+    const pMather = prompt("어머니의 키를 입력해주세요")
+    const mather = Number(pMather)
+    const boy = (father+mather + 13)/2
+    const girl = (father+mather - 13)/2
+    console.log(`남자아이의 예상 키는 ${boy}cm, 여자아이의 예상 키는 ${girl}cm`)
+
+    //6-3.
+    // 물건 계약하고 마진 붙여서 판매
+    const pProduct = prompt("물건 가격을 기재해주세요")
+    const product = Number(pProduct)
+    const sellProuct = pProduct*1.1
+    console.log(`판매 시 물건 가격 ${sellProuct}`)
+
+
+
+
+  </script>
+</body>
+</html>
