@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 02-03.html
+    // 자료형 변환
+    // 문자열과 숫자를 숫자 연산으로 하고 싶은 경우
+    console.log("100" + 10)
+    // 의도는 110 출력은 10010
+    // 양변의 하나라도 문자열이면 문자열 연결 연산자로 우선 처리 된다
+    console.log("100"*10)
+    // -, *, /, %는 문자열 연산은 안되므로 
+    // 내부적으로 자동 형 변환되어 숫자 연산이 되었다
+
+    // 문자열 입력
+    // 문자열 자료형을 입력할 때 브라우저와 상호작용해서 동작하는
+    // prompt()라는 메소드가 있다
+    // prompt(메시지 문자열, 기본 입력 문자열)
+
+    // const input = prompt("message","_dafault")
+    // const input = prompt("아무거나 입력해보세요")
+    // console.log(input)
+
+    // 불린 입력
+    // comfirm(메시지 문자열)
+    // 확인 클릭시 true리턴, 취소를 클릭시 false 리턴
+    // const result = confirm("수락하시겠습니까?")
+    // console.log(result)
+
+    // 숫자 자료형으로 변환하기
+    // Number(자료)
+    console.log("273")
+    console.log(typeof(Number("273")))
+    let l1 = "273"
+    console.log(typeof(l1)) //string
+    l1=Number(l1)
+    console.log(typeof(l1)) //number
+
+    // 다른 문자가 들어있어서 숫자로 변환할 수 없는 문자열의 경우
+    // NaN(Not a Number)라는 값을 출력합니다
+    // NaN - 숫자로 나타낼 수 없는 숫자를 의미
+    // Number("$4273")
+    console.log(Number("$273")) //NaN
+    let l2 = Number("$273")
+    console.log(12) //NaN
+    console.log(typeof(12)) //자료형은 number
+
+    // 불린도 숫자형으로 변환 가능 하다
+    console.log(Number(true))
+    console.log(Number(false))
+
+  </script>
+</body>
+</html>
