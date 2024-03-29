@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+        // min() 함수
+    // 배열 또는 숫자 나열을 매개변수로 넣어도 다 동작하게 하고 싶다
+    // min(배열) 배열 내부에서 최솟값을 찾아주는 함수
+    // min(숫자, 숫자, ...)형태로 매개변수를 넣으면
+    // 숫자들 중에서 최솟값을 찾아주는 함수
+    // 매개변수로 들어온 자료형이 배열인지 숫자인지 확인해야 한다
+    // 숫자 자료형은 typeof 연산자를 활용
+    // 배열에 typeof 연산자를 사용하면 object(객체)라는 결과가 나온다
+    // Array.isArray()메소드를 활용, 배열이면 true, 아니면 false
+
+  //   function min(a) {
+  //     let minResult = a[0];
+  //     if(typeof a === 'number'){
+  //       for(const i of a){
+  //         if(minResult>i){
+  //           minResult = i
+  //         }
+  //       }
+  //     } else if(typeof(a)=== 'Object'){
+  //       for(const i of a){
+  //         if(minResult>i){
+  //           minResult = i
+  //         }
+  //     }
+  //   }
+  //   console.log("문제 있음")
+  //   result = minResult
+  // }
+  //   const array1 = [3,5,9,4]
+  //   min(4,5,6)
+  //   min(array1)
+
+    // 1번
+    function multiplyAll(a,b) {
+      let result =1; 
+      for(let i=a; i<=b; i++){
+        result *= i 
+      }
+      return result
+    }
+    console.log(multiplyAll(1,4))
+
+    //2-1번
+    function max(...array) {
+      let output = array[0]
+      for(const item of array){
+        if(output<item){
+          output = item
+        }
+      }
+      return output
+    }
+    const arr1 = [1,2,3,4]
+    console.log(max(...arr1))
+
+    //2-2번
+    function max2(array){
+      let output = array[0]
+      for(const item of array){
+        if(output<item){
+          output = item
+        }
+      }
+      return output
+    }
+    console.log(max2(arr1))
+
+    //2-3번
+    // ???
+
+    // num_list가 주어질때, 첫번째로 나오는 음수의 인덱스를 return하도록
+    // solution 함수를 완성하기. 음수가 없다면 -1을 return
+    function solution(num_list) {
+      let indexNum;
+      for(let i=0; i<num_list.length; i++){
+        if(num_list[i]<0){
+          let indexNum = i
+        }
+      }
+      
+      return console.log(indexNum)
+    }
+    solution([12,4,15,46,38,-2,15])
+
+    // 집에서 문제 풀기
+    
+
+  </script>
+</body>
+</html>
