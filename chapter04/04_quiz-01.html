@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1.
+    /*
+    # for in 반복문
+    사과
+    배
+    귤
+    바나나
+
+        # for of 반복문
+    사과
+    배
+    귤
+    바나나
+    */
+
+    //2. 
+    // const -> let
+    //3. 
+    let output2 = 1
+    for(let i=1; i<101; i++){
+      output2 *= i
+    }
+    console.log(output2)
+
+    //4.
+      // 변수를 선언합니다.
+      let output = ''
+      const size = 5
+
+      // 반복합니다.
+      for (let i =1; i <= size; i++) {
+        for (let j = size; j > i; j--) {
+          output += ' '
+        }
+        for (let k = 0; k < 2 * i - 1; k++) {
+          output += '*'
+        }
+        output += '\n'
+      }
+
+      for (let i = size -1; i > 0; i--) {
+        for (let j = size; j > i; j--) {
+          output += ' '
+        }
+        for (let k = 0; k < 2 * i - 1; k++) {
+          output += '*'
+        }
+        output += '\n'
+      }
+
+      // 출력합니다.
+      console.log(output)
+
+
+  </script>
+</body>
+</html>
