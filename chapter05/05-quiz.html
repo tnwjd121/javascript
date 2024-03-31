@@ -50,32 +50,51 @@
     console.log(multiplyAll(1,4))
 
     //2-1번
-    function max(...array) {
+    function max(array) {
       let output = array[0]
-      for(const item of array){
-        if(output<item){
-          output = item
+      for(i in array){
+        if(output<array[i]){
+          output = array[i]
         }
       }
       return output
     }
-    const arr1 = [1,2,3,4]
-    console.log(max(...arr1))
+    console.log(max([1,2,3,4]))
 
     //2-2번
-    function max2(array){
+    function max2(...array){
       let output = array[0]
-      for(const item of array){
-        if(output<item){
-          output = item
+      for( i in array){
+        if(output<array[i]){
+          output = array[i]
         }
       }
       return output
     }
-    console.log(max2(arr1))
+    console.log(max2(1,2,3,4))
 
     //2-3번
-    // ???
+    function max3(array1, ...array2) {
+      let output
+      let items
+
+      if (Array.isArray(array1)){
+        output = array1[0]
+        items = array1
+      } else if (typeof array1 === "number") {
+        output = array1
+        items = array2
+      }
+      for (i of items){
+        if(output < i) {
+          output = i;
+        }
+      }
+      return output
+    }
+    console.log(`max(배열): ${max3([1,2,3,4])}`)
+    console.log(`max(숫자): ${max3(1,2,3,4)}`)
+
 
     // num_list가 주어질때, 첫번째로 나오는 음수의 인덱스를 return하도록
     // solution 함수를 완성하기. 음수가 없다면 -1을 return
