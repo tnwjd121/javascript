@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1번
+    let numbers = [273,25,75,52,103,32,57,24,76]
+
+    numbers.filter(i => i%2!==0 && i<=100 && i%5==0)
+        .forEach(i => console.log(i))
+
+    //2번
+    const array = ['사과', '배', '귤', '바나나']
+    array.forEach(i => console.log(i))
+
+    // 배열만들기
+    function solution(n, k) {
+      let result = [];
+      for(let i=1; i<=n; i++){
+        if(i%k==0){
+          result.push(i)
+        }
+      }
+      return console.log(result);
+    }
+
+    solution(15, 5)
+
+    // 배열만들기2
+    function solution2(l, r) {
+      let result = [];
+      for(let i=l; i<=r; i++){
+        if([...String(i)].every(num => num === '0' || num === '5')){
+          result.push(i)
+        }
+      }
+      return result.length>0?result : [-1]
+    }
+    console.log(solution2(5,555))
+    console.log(solution2(10,20))
+
+    // 배열만들기3
+    function solution3 (arr, intervals) {
+      let [[a1, b1], [a2,b2]] = intervals
+      return [...arr.slice(a1, b1+1),...arr.slice(a2,b2+1)]
+    }
+    console.log(solution3([1,2,3,4,5], [[1,3],[0,4]]))
+    
+
+  </script>
+</body>
+</html>
