@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //주변 맛집 리스트에서 오늘 점심먹을 식당을 램덤으로 추천해주는 프로그램을 작성하세요 추천할 곳은 3곳을 추출하세요
+    // 주변 맛집 리스트
+    let restaurant = ["라라관", "뉴러우멘관즈", "대쿠이", "A6양곱창", "발해양꼬지", "항아리보쌈", "소설담", "킨슈", "바오하우스", "두루미"]
+
+
+    function food() {
+      let nums = []
+      let bestRestaurant = []
+
+      while (nums.length < 3) {
+        let num = Math.floor((Math.random()*9)+1)
+        if(!nums.includes(num)){
+          nums.push(num)
+        bestRestaurant.push(restaurant[num])
+      }
+    }
+      return bestRestaurant
+    }
+
+    console.log(food())
+
+
+  </script>
+</body>
+</html>
