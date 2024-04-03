@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1번 throw
+    // 2번 1번
+    // 3번
+    try {
+      console.log('try 구문입니다')
+      const array = ['사과', '바나나', '귤']
+      array.forEach(()=> {
+        throw '예외를 강제로 발생시킵니다.'
+      })
+    }catch (e){
+      console.log('catch 구문입니다')
+    }finally {
+      console.log('finally 구문입니다.')
+    }
+
+    // 1번 1번
+    // 2번
+    /*
+    쇼핑 종합 사이트
+    객체 - 속성
+    브랜드 - 브랜드명, 전화번호, 리뷰 목록 등
+    품목 - 품목명, 사진, 가격 등
+    회원 - 이름, 주소, 전화번호 등
+
+    여행 사이트
+    항공사 - 항공사명, 전화번호, 리뷰 등
+    숙박업소 - 숙박업소명, 전화번호, 리뷰 등
+    회원 - 이름, 전화번호, 나이 등
+
+    택배 정보 사이트
+    운송기업 - 기업명, 전화번호, 위치 등
+    배송품 - 배송품명, 운송장번호, 담당자 전화번호 등
+    회원 - 이름, 전화번호, 주소 등
+    */
+
+    // 3번 
+    // 여권 정보
+    // 품목 색상
+    // 배송 담당자 전화번호
+
+    // 4번
+    // 배달이 다른 곳으로 도착했어요 클릭하면 고객센터와 연결된다.
+    // 배송품에 현재 위치를 클릭하면 현재 배송품 위치가 뜬다.
+    // 여행 시 여행하는 지역 클릭하면 관련 숙박 및 비행기 정보가 뜬다
+
+  </script>
+</body>
+</html>
