@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1번 extends
+    //2번 super
+    //3번 static
+    //4번 private
+    //5번 4번
+    //6번
+    class Parent {
+      test() {
+        console.log("Parent.test() 메소드")
+      }
+    }
+    class ChildA extends Parent{
+      test(){
+        super.test()
+        console.log("ChildA.test() 메소드")
+      }
+    }
+    class ChildB extends Parent {
+      test() {
+        console.log("ChildB.test() 메소드")
+        super.test()
+      }
+    }
+    const childAInstance = new ChildA();
+    const childBInstance = new ChildB();
+
+    childAInstance.test(); // 출력: Parent.test() 메소드\nChildA.test() 메소드
+    childBInstance.test(); // 출력: ChildB.test() 메소드\nParent.test() 메소드
+  </script>
+</body>
+</html>
